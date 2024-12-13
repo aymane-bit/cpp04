@@ -6,7 +6,7 @@
 /*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:17:18 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/11 13:28:21 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/13 12:45:37 by akajjou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ Dog::Dog()
 Dog::~Dog()
 {
     std::cout << "Dog destractor called\n";
-    delete this;
 }
 
 Dog::Dog(const Dog& original)

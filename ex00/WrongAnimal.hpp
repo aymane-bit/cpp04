@@ -1,48 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 21:11:52 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/13 12:45:49 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/13 12:17:06 by akajjou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Animal.hpp"
+# include "WrongAnimal.hpp"
 
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
-    std::cout << "Animal default constractor called for \n"; 
-    this->type = "animal";
+    std::cout << "WrongAnimal default constractor called for \n"; 
+    this->type = "Wronganimal";
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
-    std::cout << "Animal destractor called\n";
+    std::cout << "WrongAnimal destractor called\n";
+    delete this;
 }
 
-Animal::Animal(const Animal& original)
+WrongAnimal::WrongAnimal(const WrongAnimal& original)
 {
-    std::cout << "Animal copy constractor called\n";
+    std::cout << "WrongAnimal copy constractor called\n";
     this->type = original.type;
 }
 
-Animal&     Animal::operator=(const Animal &original)
+WrongAnimal&     WrongAnimal::operator=(const WrongAnimal &original)
 {
-    std::cout << "Animal copy assignment operator called\n";
+    std::cout << "WrongAnimal copy assignment operator called\n";
     if (this != &original)
         this->type = original.type;
     return *this;
 }
 
 
-std::string const &Animal::get_type() const
+std::string const &WrongAnimal::get_type() const
 {
     return this->type; 
 }
-void Animal::makeSound() const
+void WrongAnimal::makeSound() const
 {
     std::cout << "!! universal sound !!\n";
 }

@@ -6,7 +6,7 @@
 /*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:15:43 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/11 13:14:15 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/13 12:45:15 by akajjou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 
 class Cat : public Animal
 {
-    private :
-        std::string type;
     public :
         // orthodox form
         Cat();

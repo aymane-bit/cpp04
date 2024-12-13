@@ -6,7 +6,7 @@
 /*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 17:53:57 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/11 18:07:08 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/13 12:18:17 by akajjou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 # define WRONGCAT_HPP
 
 # include <iostream>
+# include "WrongAnimal.hpp"
 
-
-class WrongCat
+class WrongCat : public WrongAnimal
 {
     private:
         std::string type;
