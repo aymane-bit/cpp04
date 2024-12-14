@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:49:28 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/11 12:51:05 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/14 19:40:31 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,34 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-int main( void )
-{
-	const Animal* animal = new Animal();
-	const Animal* dog = new Dog();
-	const Animal* cat = new Cat();
+int main() {
+    // Create an array of Animal* (mixed Dog and Cat objects)
+    Animal* animals[6];
 
-	std::cout << std::endl;
-	std::cout << "Dog->getType [" << dog->gettype() << "] " << std::endl;
-	std::cout << "Cat->getType [" << cat->gettype() << "] " << std::endl;
-	cat->makeSound(); //will output the cat sound! (not the Animal)
-	dog->makeSound(); //will output the dog sound! (not the Animal)
-	animal->makeSound(); //will output the animal sound
+    // Half Dog and half Cat objects in the array
+    for (int i = 0; i < 3; i++) {
+        animals[i] = new Dog();
+    }
+    for (int i = 3; i < 6; i++) {
+        animals[i] = new Cat();
+    }
 
-	std::cout << std::endl;
-	const WrongAnimal* wrong_animal = new WrongAnimal();
-	const WrongAnimal* wrong_cat = new WrongCat();
+    // Test the makeSound method
+    std::cout << "Testing sounds:" << std::endl;
+    for (int i = 0; i < 6; i++) {
+        animals[i]->makeSound();
+    }
 
-	std::cout << std::endl;
-	wrong_cat->makeSound();
-	wrong_animal->makeSound();
+    // Test deep copy by creating a new Dog and assigning a Dog to it
+    Dog dogCopy = *dynamic_cast<Dog*>(animals[0]);
+    std::cout << "Testing deep copy (Dog):" << std::endl;
+    dogCopy.makeSound();
 
-	std::cout << std::endl;
-	delete animal;
-	delete dog;
-	delete cat;
-	delete wrong_cat;
-	delete wrong_animal;
+    // Clean up: Delete every Animal (this will also call the appropriate destructors)
+    std::cout << "Cleaning up:" << std::endl;
+    for (int i = 0; i < 6; i++) {
+        delete animals[i];
+    }
+
+    return 0;
 }
