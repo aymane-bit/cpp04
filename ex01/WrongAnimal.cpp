@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 21:11:52 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/13 12:17:35 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/14 18:26:25 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 WrongAnimal::WrongAnimal()
 {
-    std::cout << "WrongAnimal default constractor called for \n"; 
+    std::cout << "WrongAnimal default constructor called for \n"; 
     this->type = "Wronganimal";
 }
 
 WrongAnimal::~WrongAnimal()
 {
-    std::cout << "WrongAnimal destractor called\n";
+    std::cout << "WrongAnimal destructor called\n";
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& original)
 {
-    std::cout << "WrongAnimal copy constractor called\n";
+    std::cout << "WrongAnimal copy constructor called\n";
     this->type = original.type;
 }
 

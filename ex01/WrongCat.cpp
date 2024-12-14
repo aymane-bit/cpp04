@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 18:07:23 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/11 18:08:29 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/14 18:26:25 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 WrongCat::WrongCat()
 {
-    std::cout << "WrongCat default constractor called for \n"; 
+    std::cout << "WrongCat default constructor called for \n"; 
     this->type = "WrongCat";
 }
 
 WrongCat::~WrongCat()
 {
-    std::cout << "WrongCat destractor called\n";
+    std::cout << "WrongCat destructor called\n";
 }
 
 WrongCat::WrongCat(const WrongCat& original) : WrongAnimal(original)
 {
-    std::cout << "WrongCat copy constractor called\n";
+    std::cout << "WrongCat copy constructor called\n";
     this->type = original.type;
 }
 

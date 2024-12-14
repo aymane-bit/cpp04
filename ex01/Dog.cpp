@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:17:18 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/13 12:45:37 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/14 18:26:25 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 Dog::Dog()
 {
-    std::cout << "Dog default constractor called\n"; 
+    std::cout << "Dog default constructor called\n"; 
     type = "Dog";
 }
 
 Dog::~Dog()
 {
-    std::cout << "Dog destractor called\n";
+    std::cout << "Dog destructor called\n";
 }
 
 Dog::Dog(const Dog& original) : Animal(original)
 {
-    std::cout << "Dog copy constractor called\n";
+    std::cout << "Dog copy constructor called\n";
     this->type = original.type;
 }
 

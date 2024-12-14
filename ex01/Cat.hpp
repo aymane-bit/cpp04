@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:15:43 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/13 12:45:15 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/14 18:14:59 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CAT_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 # include <iostream>
 
 class Cat : public Animal
@@ -27,6 +28,8 @@ class Cat : public Animal
         void makeSound()const;
         std::string const &gettype() const;
         virtual ~Cat();
+    private :
+        Brain *brain;
 };
 
 

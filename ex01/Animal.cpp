@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 21:11:52 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/13 12:45:49 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/14 18:26:25 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 Animal::Animal()
 {
-    std::cout << "Animal default constractor called for \n"; 
+    std::cout << "Animal default constructor called for \n"; 
     this->type = "animal";
 }
 
 Animal::~Animal()
 {
-    std::cout << "Animal destractor called\n";
+    std::cout << "Animal destructor called\n";
 }
 
 Animal::Animal(const Animal& original)
 {
-    std::cout << "Animal copy constractor called\n";
+    std::cout << "Animal copy constructor called\n";
     this->type = original.type;
 }
 

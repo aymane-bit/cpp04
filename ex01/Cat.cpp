@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:17:18 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/13 12:45:43 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/14 19:14:44 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,35 @@
 
 Cat::Cat()
 {
-    std::cout << "Cat default constractor called\n"; 
+    std::cout << "Cat default constructor called\n"; 
     type = "Cat";
+    brain = new Brain();
 }
 
 Cat::~Cat()
 {
-    std::cout << "Cat destractor called\n";
+    std::cout << "Cat destructor called\n";
+    delete brain;
 }
 
 Cat::Cat(const Cat& original) : Animal(original)
 {
-    std::cout << "Cat copy constractor called\n";
+    std::cout << "Cat copy constructor called\n";
     this->type = original.type;
+    this->brain = new Brain(*original.brain);
 }
 
 Cat&     Cat::operator=(const Cat &original)
 {
     std::cout << "Cat copy assignment operator called\n";
     if (this != &original)
+    {
         this->type = original.type;
+        Animal::operator=(original);
+        if (this->brain)
+            delete this->brain;
+        this->brain = new Brain(*original.brain);
+    }
     return *this;
 }
 
