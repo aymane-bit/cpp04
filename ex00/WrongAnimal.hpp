@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 21:07:56 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/13 12:42:29 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/15 18:02:03 by akajjou          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class WrongAnimal
         WrongAnimal(const WrongAnimal& original);
         WrongAnimal& operator=(const WrongAnimal &original);
         // mm fct
-        virtual void makeSound()const;
+        void makeSound()const;
         // getter setter
         std::string const &get_type() const;
         virtual ~WrongAnimal();
