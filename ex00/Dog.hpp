@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:15:43 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/13 12:45:24 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/16 19:27:25 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Dog : public Animal
         Dog(const Dog& original);
         Dog& operator=(const Dog &original);
         // mm fct
-        void makeSound()const;
+        void makeSound() const;
         virtual ~Dog();
         std::string const &gettype() const;
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akajjou <akajjou@student.42.fr>            +#+  +:+       +#+        */
+/*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:15:43 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/13 12:45:15 by akajjou          ###   ########.fr       */
+/*   Updated: 2024/12/16 19:27:32 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cat : public Animal
         Cat(const Cat& original);
         Cat& operator=(const Cat &original);
         // mm fct
-        void makeSound()const;
+        void makeSound() const ;
         std::string const &gettype() const;
         virtual ~Cat();
 };
