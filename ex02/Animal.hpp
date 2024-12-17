@@ -1,33 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 12:15:43 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/16 21:13:29 by aymane           ###   ########.fr       */
+/*   Created: 2024/12/10 21:07:56 by akajjou           #+#    #+#             */
+/*   Updated: 2024/12/17 16:43:12 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef CAT_HPP
-# define CAT_HPP
+# ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
-# include "Animal.hpp"
 # include <iostream>
 
-class Cat : public Animal
+class AAnimal
 {
-    public :
+    protected:
+        std::string type;
+    public:
         // orthodox form
-        Cat();
-        Cat(const Cat& original);
-        Cat& operator=(const Cat &original);
-        // m    m fct
-        void makeSound() const ;
+        AAnimal();
+        AAnimal(const AAnimal& original);
+        AAnimal& operator=(const AAnimal &original);
+        // mm fct
+        virtual void makeSound()const = 0;
+        // getter setter
         std::string const &gettype() const;
-        virtual ~Cat();
+        virtual ~AAnimal();
 };
+
+
+
 
 
 #endif

@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/11 12:15:43 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/16 21:13:29 by aymane           ###   ########.fr       */
+/*   Created: 2024/12/13 23:09:03 by aymane            #+#    #+#             */
+/*   Updated: 2024/12/14 19:32:30 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef CAT_HPP
-# define CAT_HPP
+# ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-# include "Animal.hpp"
 # include <iostream>
 
-class Cat : public Animal
+class Brain
 {
+    private :
+        std::string ideas[100];
     public :
-        // orthodox form
-        Cat();
-        Cat(const Cat& original);
-        Cat& operator=(const Cat &original);
-        // m    m fct
-        void makeSound() const ;
-        std::string const &gettype() const;
-        virtual ~Cat();
+        Brain();
+        Brain(const Brain &original);
+        Brain& operator=(const Brain &original);
+        ~Brain();
 };
 
 
-#endif
+# endif

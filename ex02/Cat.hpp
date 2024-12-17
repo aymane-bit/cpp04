@@ -6,7 +6,7 @@
 /*   By: aymane <aymane@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:15:43 by akajjou           #+#    #+#             */
-/*   Updated: 2024/12/16 21:13:29 by aymane           ###   ########.fr       */
+/*   Updated: 2024/12/17 16:41:55 by aymane           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,22 @@
 # define CAT_HPP
 
 # include "Animal.hpp"
+# include "Brain.hpp"
 # include <iostream>
 
-class Cat : public Animal
+class Cat : public AAnimal
 {
     public :
         // orthodox form
         Cat();
         Cat(const Cat& original);
         Cat& operator=(const Cat &original);
-        // m    m fct
-        void makeSound() const ;
+        // mm fct
+        void makeSound()const;
         std::string const &gettype() const;
         virtual ~Cat();
+    private :
+        Brain *brain;
 };
 
 
